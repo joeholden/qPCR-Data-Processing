@@ -44,7 +44,7 @@ for i in consolidated:
 results_sheet = pd.read_excel(FILE_PATH, sheet_name='Results')
 data_cleaned_2 = results_sheet.drop(results_sheet.index[0:43])
 data_cleaned_2.rename(columns={'96-Well 0.2-mL Block': 'Well', 'Unnamed: 14': 'CT'}, inplace=True)
-data_cleaned_2 = data_cleaned_2.drop([127, 128, 129, 130, 131])
+# data_cleaned_2 = data_cleaned_2.drop([127, 128, 129, 130, 131])
 data_cleaned_2.reset_index(inplace=True)
 
 wells_ = data_cleaned_2['Well']
